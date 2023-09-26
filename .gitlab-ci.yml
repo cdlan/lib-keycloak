@@ -14,7 +14,9 @@ unit-test:
 
 release:
   stage: release
-  image: gitlab/glab:latest
+  image:
+    name: gitlab/glab:latest
+    entrypoint: [ "bash" ]
   script:
     - glab changelog generate > changelog.md
     - glab release create ${CI_COMMIT_TAG} -F changelog.md
