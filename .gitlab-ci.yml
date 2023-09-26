@@ -16,7 +16,7 @@ release:
   stage: release
   image:
     name: gitlab/glab:latest
-    entrypoint: [ "bash" ]
+    entrypoint: [ "" ]
   script:
     - glab changelog generate > changelog.md
     - glab release create ${CI_COMMIT_TAG} -F changelog.md
