@@ -1,0 +1,22 @@
+stages:
+  - test
+  - release
+
+unit-test:  
+  stage: test
+  image: golang
+  script:
+    - go install gotest.tools/gotestsum@latest
+    - gotestsum --junitfile report.xml --format testname
+  artifacts:
+    reports:
+      junit: report.xml
+
+release:
+  stage: release
+  image: gitlab/glab:latest
+  script:
+    - glab changelog generate > changelog.md
+    - glab release create ${CI_COMMIT_TAG} -F changelog.md
+  rules:
+    - if: $CI_COMMIT_TAG
