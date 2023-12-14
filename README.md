@@ -2,6 +2,7 @@
 Wrapper around [github.com/Nerzal/gocloak](https://github.com/Nerzal/gocloak/tree/main) KeyCloak Go Library
 
 ## Install
+
 ```shell
 go get github.com/cdlan/lib-keycloak
 ```
