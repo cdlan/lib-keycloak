@@ -1,11 +1,11 @@
 # keycloak
-KeyCloak Go Library
+Wrapper around [github.com/Nerzal/gocloak](https://github.com/Nerzal/gocloak/tree/main) KeyCloak Go Library
 
 ## Install
 **TODO**
 
 ## Usage
-```go
+```golang
 // initialize object
 kc := keycloak.Config{
     Url:        "https://kc.domain.example/auth/",

@@ -1,4 +1,4 @@
-module cdlab.cdlan.net/cdlan/lib/keycloak
+module github.com/cdlan/lib-keycloak
 
 go 1.21.1
 
