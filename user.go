@@ -32,16 +32,6 @@ func (c *Config) SearchUser(ctx context.Context, email string) (*gocloak.User, e
 	return nil, nil
 }
 
-// Actions returns a list of actions: verifyMail, updatePassword, configureTOTP
-func (c *Config) Actions() *[]string {
-
-	return &[]string{
-		"VERIFY_EMAIL",
-		"UPDATE_PASSWORD",
-		"CONFIGURE_TOTP",
-	}
-}
-
 // CreateUser create a new user
 func (c *Config) CreateUser(ctx context.Context, user gocloak.User) error {
 

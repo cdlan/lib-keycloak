@@ -14,3 +14,13 @@ func PasswordCredentialRep(pass string) gocloak.CredentialRepresentation {
 		Temporary: &trueVal,
 	}
 }
+
+// DefaultActions returns a list of actions: verifyMail, updatePassword, configureTOTP
+func DefaultActions() *[]string {
+
+	return &[]string{
+		"VERIFY_EMAIL",
+		"UPDATE_PASSWORD",
+		"CONFIGURE_TOTP",
+	}
+}
