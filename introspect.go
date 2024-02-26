@@ -15,7 +15,7 @@ func (c *Config) Introspect(ctx context.Context, token string) (*[]gocloak.Resou
 		return nil, err
 	}
 
-	res, err := s.client.RetrospectToken(ctx, s.token.AccessToken, c.ClientID, c.Secret, c.Realm)
+	res, err := s.client.RetrospectToken(ctx, token, c.ClientID, c.Secret, c.Realm)
 	if err != nil {
 		return nil, err
 	}
